@@ -1,0 +1,46 @@
+.hello {
+  color: red;
+
+}
+ul {
+	width:50%;
+	float: left;
+	background-color:lightgrey;
+	list-style: none;
+	margin: 0;padding: 0
+}
+li {
+	display: inline-block;
+	width:2em;
+	height: 2em;
+    /*border: 1px solid grey;*/
+	background-color: white;
+	padding: 5px;
+	margin: 1px;
+	text-align: center;
+	vertical-align: middle;
+}
+div#lcd {
+    transform: rotate(-90deg); 
+	width:19em;
+	height:19em;
+	display: inline-block;
+	font-family: monospace;
+	font-size: 10px;
+	margin-left:2em;
+}
+div#lcd span {
+	width:2em;
+	height:2em;
+	display: inline-block;
+	margin: 0.1em;
+	border-radius: 10px;
+}
+.digitOf1 {
+    background-color: red;
+    color:rgba(256,0,0,0);
+}
+.digitOf0 {
+    background-color: rgba(200,0,0,0.2);
+    color:rgba(200,0,0,0);
+}
