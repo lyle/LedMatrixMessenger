@@ -6,13 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/lyle/LedMatrixMessenger.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyle/LedMatrixMessenger.git"
   },
   "author": "Lyle Troxell <lyle@troxell.com>(http://lyle.troxell.com)",
   "license": "MIT",
   "dependencies": {
-    "matrix-led-font": "^1.3.0"
+    "matrix-led-font": "^1.4.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2"
   }
 }
