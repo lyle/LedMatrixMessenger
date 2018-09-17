@@ -1,15 +1,41 @@
-.hello {
-  color: red;
-
+#nav {
+	list-style: none;
+	margin: 0;padding: 0;
+	margin-bottom: 1em;
+	text-align: center;
 }
-ul {
-	width:50%;
+#nav li {
+	color:lightgrey;
+	display: inline-block;
+	text-align: center;
+	padding:0 2em;
+}
+#nav li.selected {
+	color:black;
+	border-bottom: 1px solid lightgrey;
+}
+#message {
+    font-size: 30pt;
+    width: 90%;
+}
+#messageButton {
+    width: 8%;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin-left: 1%;
+}
+#content{
+	width:40%;
 	float: left;
+    font-size: 20pt;
+}
+#glyphs {
 	background-color:lightgrey;
 	list-style: none;
-	margin: 0;padding: 0
+	margin: 0;padding: 0;
 }
-li {
+#glyphs li {
 	display: inline-block;
 	width:2em;
 	height: 2em;
@@ -20,27 +46,80 @@ li {
 	text-align: center;
 	vertical-align: middle;
 }
-div#lcd {
-    transform: rotate(-90deg); 
+
+/*LCD Styles*/
+#lcd {
 	width:19em;
 	height:19em;
 	display: inline-block;
 	font-family: monospace;
-	font-size: 10px;
 	margin-left:2em;
+	font-size:16px;
+    transition:  background-color 2s, transform 1s , font-size 1s;
+
 }
-div#lcd span {
+
+#lcd .digitOf1, #lcd .digitOf2{
+    transition: background-color 2s, transform 1s , font-size 1s;
+    background-color: white;
+}
+#lcd.rotate {
+    transform: rotate(-90deg);
+	font-size: 10px;
+}
+#lcd.rotateAndSize {
+    transform: rotate(-90deg);
+	font-size: 10px;
+}
+
+#lcd.rotateAndSize .digitOf1 {
+    background-color: red;
+ }
+
+#lcd.rotateAndSize .digitOf0 {
+    background-color: rgba(200,0,0,0.2);
+}
+#lcd.animatedFullLed {
+	/*transition: transform 0s,width 0s, height 0s;*/
+    transform: rotate(-90deg);
+	font-size: 10px;
+}
+#lcd.animatedFullLed .digitOf1 {
+    background-color: red;
+    color:rgba(256,0,0,0);
+}
+#lcd.animatedFullLed .digitOf0 {
+    background-color: rgba(200,0,0,0.2);
+    color:rgba(200,0,0,0);
+}
+#lcd.fullLed {
+    transition: width 0s, height 0s, background-color 0s, transform 0s;
+	font-size: 10px;
+    transform: rotate(-90deg); 
+}
+#lcd span {
 	width:2em;
 	height:2em;
 	display: inline-block;
 	margin: 0.1em;
 	border-radius: 10px;
 }
-.digitOf1 {
+#lcd.fullLed .digitOf1 {
+    transition: width 0s, height 0s, background-color 0s, transform 0s;
     background-color: red;
     color:rgba(256,0,0,0);
 }
-.digitOf0 {
+#lcd.fullLed .digitOf0 {
+	transition: width 0s, height 0s, background-color 0s, transform 0s;
     background-color: rgba(200,0,0,0.2);
     color:rgba(200,0,0,0);
+}
+.selected {
+	font-weight: bold;
+}
+#glyphs .selected {
+	background-color: lightgrey;
+}
+.hide {
+	visibility: hidden;
 }

@@ -15,6 +15,7 @@
   "author": "Lyle Troxell <lyle@troxell.com>(http://lyle.troxell.com)",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.16.3",
     "matrix-led-font": "^1.4.1"
   },
   "devDependencies": {
