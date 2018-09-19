@@ -27,21 +27,16 @@ http.createServer(function (req, res) {
 
       res.writeHead(200, {
         'Content-Type': 'text/plain; charset=latin1',
-        'Content-Length': currentMessage.join('').length
+        'Content-Length': currentMessage.length
       });
       req.on('end',function(){
         console.log(currentMessage)
-        //console.log(output.map(function(item){return item.charCodeAt(0).toString(10);}).join('-') + '\n');
-        //console.log(output.map(function(item){return pad(item.charCodeAt(0).toString(2),8) + ' ';}).join('') + '\n');
-        // console.log('parseInt 01110000,2' + parseInt('01110000',2)  + '\n');
-        // console.log('String.fromCharCode(parseInt 01110000,2)' + String.fromCharCode(parseInt('01110000',2)) + '\n');
-        // console.log('Convert Back to bin ' + String.fromCharCode(parseInt('01110000',2)).charCodeAt(0).toString(2)  + '\n');
       });
       res.end(currentMessage);
     }
-}).listen(1337, '0.0.0.0');
+}).listen(8002, '0.0.0.0');
 
-console.log('Server running at http://0.0.0.0:1337/');
+console.log('Server running at http://0.0.0.0:8002/');
 
 
 
